@@ -1,6 +1,6 @@
 # Geany Markdown Preview（增强版）
 
-[English summary](#english-summary) at the end of this file.
+**简体中文** · [English](README.en.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [한국어](README.ko.md) · [日本語](README.ja.md)
 
 Geany 编辑器的 Markdown 实时预览插件，fork 自 [geany-plugins](https://github.com/geany/geany-plugins) 2.1 官方 `markdown` 插件并深度增强：**离线数学/物理/化学公式渲染**（MathJax / KaTeX 双引擎）、**Geany 配色方案实时同步**、**GFM 管道表格**、**编辑器缩放跟随**、**HTML 导出**（手机/平板/微信浏览器友好）。
 
