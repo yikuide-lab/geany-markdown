@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.22.4: https://docutils.sourceforge.io/" />
+<title>Markdown</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 9511 2024-01-13 09:50:07Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+Despite the name, some widely supported CSS2 features are used.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: gray; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic, pre.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="markdown">
+<h1 class="title">Markdown</h1>
+
+<a class="reference external image-reference" href="plugin.png">
+<img alt="The Markdown plugin in action" class="align-center" src="plugin_small.png" />
+</a>
+<div class="contents topic" id="contents">
+<p class="topic-title"><a class="reference internal" href="#top">Contents</a></p>
+<ul class="simple">
+<li><a class="reference internal" href="#about" id="toc-entry-1">About</a></li>
+<li><a class="reference internal" href="#features" id="toc-entry-2">Features</a></li>
+<li><a class="reference internal" href="#usage" id="toc-entry-3">Usage</a><ul>
+<li><a class="reference internal" href="#tables-gfm-pipe-tables" id="toc-entry-4"><em>Tables (GFM pipe tables)</em></a></li>
+<li><a class="reference internal" href="#color-scheme" id="toc-entry-5"><em>Color scheme</em></a></li>
+<li><a class="reference internal" href="#zoom" id="toc-entry-6"><em>Zoom</em></a></li>
+<li><a class="reference internal" href="#mobile-tablet-wechat-browsers" id="toc-entry-7"><em>Mobile / tablet / WeChat browsers</em></a></li>
+<li><a class="reference internal" href="#formulas-math-physics-chemistry" id="toc-entry-8"><em>Formulas (math / physics / chemistry)</em></a></li>
+<li><a class="reference internal" href="#tables-gfm-pipe-tables-1" id="toc-entry-9"><em>Tables (GFM pipe tables)</em></a></li>
+<li><a class="reference internal" href="#preferences" id="toc-entry-10"><em>Preferences</em></a></li>
+<li><a class="reference internal" href="#custom-templates" id="toc-entry-11"><em>Custom Templates</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#requirements" id="toc-entry-12">Requirements</a></li>
+<li><a class="reference internal" href="#license" id="toc-entry-13">License</a></li>
+<li><a class="reference internal" href="#authors" id="toc-entry-14">Authors</a></li>
+<li><a class="reference internal" href="#contact" id="toc-entry-15">Contact</a></li>
+</ul>
+</div>
+<div class="section" id="about">
+<h1><a class="toc-backref" href="#toc-entry-1">About</a></h1>
+<p>This plugin provides a real-time preview of rendered Markdown, that is,
+<a class="reference external" href="http://daringfireball.net/projects/markdown">Markdown</a> converted to HTML
+and inserted into an HTML template and loaded into a
+<a class="reference external" href="http://www.webkit.org">WebKit</a> view.</p>
+</div>
+<div class="section" id="features">
+<h1><a class="toc-backref" href="#toc-entry-2">Features</a></h1>
+<ul class="simple">
+<li>Allows placing the preview in the sidebar or message window areas</li>
+<li>Updates the preview on-the-fly as you type, automatically.</li>
+<li>Allows simple customization of fonts and colours and complete control
+with custom template files.</li>
+<li>Follows the current Geany color scheme by default (including live
+updates when you switch View → Color Schemes).</li>
+<li>Renders GitHub-Flavored (GFM) pipe tables with alignment and inline
+markup in cells.</li>
+<li>Renders math, physics and chemistry formulas offline (MathJax or
+KaTeX, both bundled with the plugin).</li>
+<li>Follows the editor zoom: View → Zoom In/Out (typically <tt class="docutils literal">Ctrl++</tt> /
+<tt class="docutils literal">Ctrl+-</tt>) scales the preview together with the editor.</li>
+<li>Responsive preview and export: UTF-8 charset, mobile/tablet viewport
+and adaptive CSS, so exported HTML reads well in phone browsers,
+iPad and the WeChat browser (images scale, tables scroll sideways).</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#toc-entry-3">Usage</a></h1>
+<p>The preview is active by default for all documents with a Markdown filetype
+set. To set a document's filetype, choose from the menus:</p>
+<a class="reference external image-reference" href="set_filetype.png">
+<img alt="Choosing Document-&gt;Set Filetype-&gt;Markup Languages-&gt;Markdown source file" class="align-center" src="set_filetype.png" />
+</a>
+<p>Other than that the operation should be fully automatic. Use the Plugin
+Preferences mechanism to customize some settings as described below.</p>
+<p>For more information on Markdown syntax, read the
+<a class="reference external" href="http://daringfireball.net/projects/markdown/syntax">Markdown Syntax Documentation</a>.</p>
+<div class="section" id="tables-gfm-pipe-tables">
+<h2><a class="toc-backref" href="#toc-entry-4"><em>Tables (GFM pipe tables)</em></a></h2>
+<p>GitHub-Flavored pipe tables are supported, including column alignment
+and inline markup (bold, code, links, formulas) in cells:</p>
+<pre class="literal-block">
+| 对象 | 定义 | 可否建模 |
+|---|:---:|---:|
+| 价格 $P_t$ | **非平稳** | ❌ |
+| 对数收益 | 弱平稳 | ✅ |
+</pre>
+<ul class="simple">
+<li>Header and delimiter rows must have the same number of cells;
+otherwise the block is not treated as a table.</li>
+<li>Alignment markers: <tt class="docutils literal"><span class="pre">:---</span></tt> (left), <tt class="docutils literal"><span class="pre">:---:</span></tt> (center), <tt class="docutils literal"><span class="pre">---:</span></tt>
+(right).</li>
+<li>Escaped pipes (<tt class="docutils literal">\|</tt>) stay inside the current cell.</li>
+<li>Formulas are extracted <em>before</em> table parsing, so <tt class="docutils literal">$|x|$</tt> never
+splits a cell.</li>
+<li>Styling follows the preview color scheme (table CSS is injected
+automatically for older templates).</li>
+</ul>
+</div>
+<div class="section" id="color-scheme">
+<h2><a class="toc-backref" href="#toc-entry-5"><em>Color scheme</em></a></h2>
+<p>By default the preview uses the colors of the currently selected Geany
+color scheme (View → Color Schemes): body background/foreground,
+text selection, code backgrounds and table chrome.  Switching the
+scheme re-renders the preview automatically.  Uncheck <em>Use current
+Geany color scheme</em> in the plugin preferences to fall back to the
+manual <em>BG Color</em> / <em>FG Color</em> settings.</p>
+</div>
+<div class="section" id="zoom">
+<h2><a class="toc-backref" href="#toc-entry-6"><em>Zoom</em></a></h2>
+<p>Use View → Zoom In / Zoom Reset / Zoom Out (default keybindings
+<tt class="docutils literal">Ctrl++</tt>, <tt class="docutils literal">Ctrl+0</tt>, <tt class="docutils literal">Ctrl+-</tt>) or <tt class="docutils literal">Ctrl</tt> + mouse wheel in the
+editor.  The preview scales by the same factor, computed from the
+editor's zoom in points relative to the configured body font size.
+The zoom level is restored after each preview re-render and follows
+document switches.</p>
+</div>
+<div class="section" id="mobile-tablet-wechat-browsers">
+<h2><a class="toc-backref" href="#toc-entry-7"><em>Mobile / tablet / WeChat browsers</em></a></h2>
+<p>The default HTML template includes a UTF-8 <tt class="docutils literal">charset</tt> meta tag, a
+responsive <tt class="docutils literal">viewport</tt> meta tag and adaptive CSS: images and videos
+scale to the screen width, wide tables scroll horizontally below
+800&amp;nbsp;px, and iOS/WeChat text-size inflation is disabled.  The same
+markup is written by <strong>Tools → Export Markdown as HTML</strong>, so exported
+files render correctly when opened on a phone, iPad or in the WeChat
+browser.  Older custom templates without these tags get the meta tags
+and a <tt class="docutils literal"><span class="pre">md-responsive-css</span></tt> block injected automatically before
+<tt class="docutils literal">&lt;/head&gt;</tt>.</p>
+</div>
+<div class="section" id="formulas-math-physics-chemistry">
+<h2><a class="toc-backref" href="#toc-entry-8"><em>Formulas (math / physics / chemistry)</em></a></h2>
+<p>The preview renders LaTeX-style formulas in real time.  The following
+delimiters are recognized (they are extracted <em>before</em> Markdown parsing,
+so <tt class="docutils literal">_</tt>, <tt class="docutils literal">*</tt> and <tt class="docutils literal">&amp;</tt> inside formulas are never mangled):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Syntax</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">$E = mc^2$</tt></td>
+<td>Inline math</td>
+</tr>
+<tr><td><tt class="docutils literal">\(a_i + b_i\)</tt></td>
+<td>Inline math (alternative delimiter)</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">$$\int_0^1</span> <span class="pre">x\,dx$$</span></tt></td>
+<td>Display (block) math</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\[\dv{y}{x}\]</span></tt></td>
+<td>Display math (alternative delimiter)</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Math: any LaTeX formula, e.g. <tt class="docutils literal"><span class="pre">$\frac{\partial</span> <span class="pre">u}{\partial</span> t} = \alpha \nabla^2 u$</tt></li>
+<li>Physics: with the default MathJax engine the full <tt class="docutils literal">physics</tt> macro
+package works, e.g. <tt class="docutils literal"><span class="pre">\(\dv{y}{x}\)</span></tt>, <tt class="docutils literal"><span class="pre">\(\pdv{f}{x}\)</span></tt>,
+<tt class="docutils literal"><span class="pre">\(\qty{9.81}{m/s^2}\)</span></tt>.  The KaTeX engine ships a shim covering the
+most common physics macros.</li>
+<li>Chemistry: the <tt class="docutils literal">mhchem</tt> package is available on both engines, e.g.
+<tt class="docutils literal"><span class="pre">\(\ce{2H2</span> + O2 <span class="pre">-&gt;</span> <span class="pre">2H2O}\)</span></tt>,
+<tt class="docutils literal"><span class="pre">\(\ce{CO2</span> + C <span class="pre">-&gt;[high</span> temp] <span class="pre">2CO}\)</span></tt>.</li>
+</ul>
+<p>Fenced/inline code blocks and escaped <tt class="docutils literal">\$</tt> are never treated as math.
+A leading/trailing space inside <tt class="docutils literal"><span class="pre">$...$</span></tt> is not allowed, so plain
+currency text like <tt class="docutils literal">$5 and $10</tt> stays untouched.  Formula rendering can
+be disabled and the engine can be switched in the plugin preferences.
+Rendering is fully offline: MathJax 3.2.2 and KaTeX 0.18.7 are bundled
+in the plugin's data directory (see <tt class="docutils literal">math/README</tt>).</p>
+</div>
+<div class="section" id="tables-gfm-pipe-tables-1">
+<h2><a class="toc-backref" href="#toc-entry-9"><em>Tables (GFM pipe tables)</em></a></h2>
+<p>GitHub-style pipe tables are supported, including alignment markers and
+inline markup (bold, code, links, formulas) inside cells:</p>
+<pre class="literal-block">
+| Object | Definition | Note |
+|--------|:----------:|-----:|
+| $P_t$  | **price**  |  1   |
+| `\|`   | escaped    |  2   |
+</pre>
+<ul class="simple">
+<li>The delimiter row uses <tt class="docutils literal"><span class="pre">:---:</span></tt>, <tt class="docutils literal"><span class="pre">:---</span></tt> or <tt class="docutils literal"><span class="pre">---:</span></tt> for
+left/center/right alignment (default left).</li>
+<li>Header and delimiter rows must have the same number of cells;
+otherwise the block is not treated as a table.</li>
+<li>Escaped pipes (<tt class="docutils literal">\|</tt>) stay inside the current cell.</li>
+<li>Formulas are extracted before table parsing, so <tt class="docutils literal">$|x|$</tt> never
+splits a cell.</li>
+</ul>
+</div>
+<div class="section" id="preferences">
+<h2><a class="toc-backref" href="#toc-entry-10"><em>Preferences</em></a></h2>
+<a class="reference external image-reference" href="settings.png">
+<img alt="The Markdown plugin's preferences GUI" class="align-center" src="settings.png" />
+</a>
+<p>Using Geany's normal Plugin Preferences mechanism, you can customize some
+important settings related to the Markdown preview. The preferences dialog
+allows changing the following settings:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">../../markdown/README</tt>, line 185)</p>
+<p>Malformed table.
+Text in column margin in table line 13.</p>
+<pre class="literal-block">
+===========  ===================================================================
+Name         Description
+===========  ===================================================================
+Position     The area of Geany's UI to put the preview view, currently either
+             in the sidebar or message window (bottom) areas.
+Font         The regular body font of the preview (family and size;
+             names containing spaces are quoted in the CSS
+             automatically).
+Code Font    The font to use for ``code`` and ``pre`` blocks
+             (monospaced) font of the preview.
+BG Color     The preview's background color (ignored while *Color Scheme* is enabled).
+FG Color     The preview's foreground (text) color (ignored while *Color Scheme* is enabled).
+Color Scheme Use the current Geany color scheme for the preview (default
+             enabled); updates automatically when the scheme is switched.
+Template     The file containing the HTML template for the preview.
+Math         Enable/disable rendering of math, physics and chemistry
+             formulas in the preview.
+Math Engine  Which formula rendering engine to use: ``MathJax`` (full
+             physics + mhchem support, default) or ``KaTeX`` (faster,
+             physics macros via a built-in shim, mhchem supported).
+===========  ===================================================================
+</pre>
+</div>
+<p>There's two ways to access the Plugin settings, one is through the
+Plugin Manager using the buttons highlighted below:</p>
+<a class="reference external image-reference" href="plugin_mgr.png">
+<img alt="The Plugin Manager dialog showing the Help and Preferences buttons." class="align-center" src="plugin_mgr.png" />
+</a>
+<p>Clicking the <tt class="docutils literal">Help</tt> button opens this document in HTML format in your web
+browser. The other way to access the plugin's preferences is through the
+<tt class="docutils literal">Edit</tt> menu as pictured below:</p>
+<a class="reference external image-reference" href="plugin_prefs.png">
+<img alt="Accessing plugin preferences from the Edit menu." class="align-center" src="plugin_prefs.png" />
+</a>
+</div>
+<div class="section" id="custom-templates">
+<h2><a class="toc-backref" href="#toc-entry-11"><em>Custom Templates</em></a></h2>
+<p>You can provide a custom HTML template file which contains the substitution
+strings that get replaced at run-time. The following substitution strings
+are available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Substitution String</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">&#64;&#64;markdown&#64;&#64;</tt></td>
+<td>The most important substitution string and
+gets replaced with the HTML generated from the
+editor's Markdown buffer. Not having this one
+in the template makes the plugin completely
+useless.</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;font_name&#64;&#64;</tt></td>
+<td>The normal font family.</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;code_font_name&#64;&#64;</tt></td>
+<td>The code/monospace font family.</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;font_point_size&#64;&#64;</tt></td>
+<td>The size in points of the normal font.</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;code_font_point_size&#64;&#64;</tt></td>
+<td>The size in points of the code/monospace font.</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;bg_color&#64;&#64;</tt></td>
+<td><dl class="first last docutils">
+<dt>The background color in hex/HTML color notation</dt>
+<dd>(empty while <em>Color Scheme</em> is enabled; the
+injected scheme CSS wins).</dd>
+</dl>
+</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;fg_color&#64;&#64;</tt></td>
+<td><dl class="first last docutils">
+<dt>The foreground (text) color in hex/HTML color</dt>
+<dd>notation (empty while <em>Color Scheme</em> is
+enabled).</dd>
+</dl>
+</td>
+</tr>
+<tr><td><tt class="docutils literal">&#64;&#64;math_assets&#64;&#64;</tt></td>
+<td><dl class="first last docutils">
+<dt>Optional.  The <tt class="docutils literal">&lt;link&gt;</tt>/<tt class="docutils literal">&lt;script&gt;</tt> tags</dt>
+<dd>loading the offline formula renderer for the
+currently selected engine.  If the template
+does not contain this placeholder, the plugin
+injects the tags automatically before
+<tt class="docutils literal">&lt;/head&gt;</tt>, so existing templates keep
+working without changes.</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The default template file (at the time of writing) contains the
+following HTML code:</p>
+<pre class="literal-block">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+      body {
+        font-family: &#64;&#64;font_name&#64;&#64;;
+        font-size: &#64;&#64;font_point_size&#64;&#64;pt;
+        background-color: &#64;&#64;bg_color&#64;&#64;;
+        color: &#64;&#64;fg_color&#64;&#64;;
+        word-wrap: break-word;
+        -webkit-text-size-adjust: 100%;
+      }
+      code, pre {
+        font-family: &#64;&#64;code_font_name&#64;&#64;;
+        font-size: &#64;&#64;code_font_point_size&#64;&#64;pt;
+      }
+      pre { overflow-x: auto; }
+      img, video, canvas, svg { max-width: 100%; height: auto; }
+      table { border-collapse: collapse; margin: 1em 0; }
+      th, td { border: 1px solid #888; padding: 0.3em 0.7em; }
+      th { background: rgba(127,127,127,0.15); }
+      tr:nth-child(even) { background: rgba(127,127,127,0.06); }
+    &lt;/style&gt;
+    &lt;style id=&quot;md-responsive-css&quot;&gt;
+      &#64;media (max-width: 800px) {
+        table { display: block; overflow-x: auto; max-width: 100%; }
+        body { padding: 0.75em; }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &#64;&#64;markdown&#64;&#64;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>As you can see it's just normal HTML/CSS and you can tweak it to make the
+preview contents look exactly how you want. The preview view is a WebKit
+browser, the same one used by <a class="reference external" href="http://google.com/chrome">Google's Chrome Browser</a> and <a class="reference external" href="http://apple.com/safari">Apple's Safari Browser</a> as well as numerous others, and it supports many
+modern features such as HTML5 and CSS3 support (at least partially).</p>
+<p>If you mess up the default <tt class="docutils literal">template.html</tt> file, just delete it and the
+default one will be recreated the next time the Markdown plugin is reloaded
+(for example when Geany restarts).</p>
+</div>
+</div>
+<div class="section" id="requirements">
+<h1><a class="toc-backref" href="#toc-entry-12">Requirements</a></h1>
+<p>The plugin depends on the following libraries:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.gtk.org">GTK+</a> 3.0 or greater</li>
+<li><a class="reference external" href="http://webkitgtk.org">WebKitGTK+</a> API 4.0 or 4.1</li>
+</ul>
+<p>No extra dependencies are needed for formula rendering; the MathJax and
+KaTeX assets are bundled and installed under the plugin's data
+directory.</p>
+</div>
+<div class="section" id="license">
+<h1><a class="toc-backref" href="#toc-entry-13">License</a></h1>
+<p>The Markdown plugin is licensed under the GNU General Public License,
+version 2. For the full text of the license, please visit
+<a class="reference external" href="http://www.gnu.org/licenses/gpl-2.0.html">http://www.gnu.org/licenses/gpl-2.0.html</a>. The GPL license covers all code
+and files <em>not</em> in the <tt class="docutils literal">discount</tt> directory.</p>
+<p>All code inside the <tt class="docutils literal">discount</tt> directory is under a BSD-style license
+(see the <tt class="docutils literal">discount/COPYRIGHT</tt> file) and all contributions to this code
+<em>will</em> remain under this license. This will make it easier to integrate
+improvements to Discount back upstream if it ever makes sense. So far the
+only changes are superficial to allow it to build with the Geany-Plugins
+build system and to prevent some compiler warnings.</p>
+</div>
+<div class="section" id="authors">
+<h1><a class="toc-backref" href="#toc-entry-14">Authors</a></h1>
+<p>The Geany Markdown plugin is written and maintained by:</p>
+<pre class="literal-block">
+Matthew Brush &lt;matt(at)geany(dot)org&gt;
+</pre>
+<p>The plugin includes the Discount Markdown library, developed by:</p>
+<pre class="literal-block">
+David Loren Parsons &lt;http://www.pell.portland.or.us/~orc&gt;
+</pre>
+<p>The bundled formula rendering assets are developed by others:</p>
+<pre class="literal-block">
+MathJax 3.2.2 - Apache-2.0 (https://www.mathjax.org/)
+KaTeX 0.18.7  - MIT (https://katex.org/)
+</pre>
+</div>
+<div class="section" id="contact">
+<h1><a class="toc-backref" href="#toc-entry-15">Contact</a></h1>
+<p>You can email me at <tt class="docutils literal">matt(at)geany(dot)org</tt>, or find me on the
+<tt class="docutils literal">#geany</tt> IRC channel on FreeNode, with the nickname <tt class="docutils literal">codebrainz</tt>.</p>
+</div>
+</div>
+</body>
+</html>

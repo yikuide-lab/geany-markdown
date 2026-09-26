@@ -1,0 +1,12 @@
+# build artifacts
+*.o
+*.so
+*.la
+*.lo
+test-math
+.deps/
+.libs/
+# editors / os
+*.swp
+*~
+.DS_Store
