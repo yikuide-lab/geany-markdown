@@ -3,6 +3,7 @@
 *.so
 *.la
 *.lo
+*.mo
 test-math
 .deps/
 .libs/

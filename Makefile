@@ -20,6 +20,12 @@ GEANY_LIBDIR  ?= $(shell pkg-config --variable=libdir geany)
 PLUGINDIR     ?= $(GEANY_LIBDIR)/geany
 PLUGINDATADIR ?= $(DATADIR)/geany-plugins/markdown
 DOCDIR        ?= $(DATADIR)/doc/geany-plugins/markdown
+LOCALEDIR     ?= $(DATADIR)/locale
+
+# Translations (po/<lang>.po -> <LOCALEDIR>/<lang>/LC_MESSAGES/geany-markdown.mo)
+GETTEXT_PACKAGE = geany-markdown
+LINGUAS  ?= $(shell cat po/LINGUAS)
+MO_FILES = $(patsubst %,po/%.mo,$(LINGUAS))
 
 PKGS = geany gtk+-3.0 webkit2gtk-4.1 glib-2.0 gmodule-2.0
 
@@ -50,15 +56,19 @@ BASE_FLAGS = -fPIC \
 	-DPLUGINDATADIR="\"$(PLUGINDATADIR)\"" \
 	-DMARKDOWN_DOC_DIR="\"$(DOCDIR)\"" \
 	-DMARKDOWN_HELP_FILE="\"$(DOCDIR)/html/help.html\"" \
+	-DLOCALEDIR="\"$(LOCALEDIR)\"" \
 	-Wno-deprecated-declarations
 
 override CFLAGS += $(BASE_FLAGS)
 
 LDLIBS = $(shell pkg-config --libs $(PKGS))
 
-.PHONY: all test install uninstall clean
+.PHONY: all test install uninstall clean pot
 
-all: markdown.so test-math
+all: markdown.so test-math $(MO_FILES)
+
+po/%.mo: po/%.po
+	msgfmt -c --statistics -o $@ $<
 
 markdown.so: $(PEG_OBJS) $(PLUGIN_OBJS)
 	$(CC) -shared -o $@ $^ $(LDLIBS)
@@ -86,11 +96,27 @@ endif
 	install -d $(DESTDIR)$(DOCDIR)/html
 	install -m 644 docs/help.html docs/*.png $(DESTDIR)$(DOCDIR)/html/
 	install -m 644 AUTHORS COPYING $(DESTDIR)$(DOCDIR)/
+	for l in $(LINGUAS); do \
+		install -D -m 644 po/$$l.mo \
+			$(DESTDIR)$(LOCALEDIR)/$$l/LC_MESSAGES/$(GETTEXT_PACKAGE).mo; \
+	done
 	@echo "Installed. Restart Geany and enable 'Markdown' in the Plugin Manager."
 
 uninstall:
 	rm -f $(DESTDIR)$(PLUGINDIR)/markdown.so
 	rm -rf $(DESTDIR)$(PLUGINDATADIR) $(DESTDIR)$(DOCDIR)
+	for l in $(LINGUAS); do \
+		rm -f $(DESTDIR)$(LOCALEDIR)/$$l/LC_MESSAGES/$(GETTEXT_PACKAGE).mo; \
+	done
 
 clean:
-	rm -f markdown.so test-math $(PEG_OBJS) $(PLUGIN_OBJS)
+	rm -f markdown.so test-math $(MO_FILES) $(PEG_OBJS) $(PLUGIN_OBJS)
+
+# Regenerate the translation template after changing _() strings in src/.
+pot:
+	xgettext --language=C --keyword=_ \
+		--package-name=$(GETTEXT_PACKAGE) --package-version=1.0.0 \
+		--msgid-bugs-address="https://github.com/yikuide-lab/geany-markdown/issues" \
+		--from-code=UTF-8 -f po/POTFILES.in -o po/$(GETTEXT_PACKAGE).pot
+	sed -i 's/"CHARSET"/"UTF-8"/; s/"ENCODING"/"8bit"/' po/$(GETTEXT_PACKAGE).pot
+	@echo "Template updated: po/$(GETTEXT_PACKAGE).pot — merge into po/*.po with msgmerge."

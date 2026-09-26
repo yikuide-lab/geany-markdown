@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the geany-markdown package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: geany-markdown 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/yikuide-lab/geany-markdown/issues\n"
+"POT-Creation-Date: 2026-09-26 13:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/conf.c:763
+msgid "Position:"
+msgstr ""
+
+#: src/conf.c:769
+msgid "Sidebar"
+msgstr ""
+
+#: src/conf.c:777
+msgid "Message Window"
+msgstr ""
+
+#: src/conf.c:791
+msgid "Font:"
+msgstr ""
+
+#: src/conf.c:808
+msgid "Code Font:"
+msgstr ""
+
+#: src/conf.c:824
+msgid "BG Color:"
+msgstr ""
+
+#: src/conf.c:840
+msgid "FG Color:"
+msgstr ""
+
+#: src/conf.c:854
+msgid "Color Scheme:"
+msgstr ""
+
+#: src/conf.c:859
+msgid "Use current Geany color scheme (overrides BG/FG colors)"
+msgstr ""
+
+#: src/conf.c:867
+msgid "Template:"
+msgstr ""
+
+#: src/conf.c:871
+msgid "Select Template File"
+msgstr ""
+
+#: src/conf.c:885
+msgid "Math:"
+msgstr ""
+
+#: src/conf.c:890
+msgid "Enable formula rendering (math/physics/chemistry)"
+msgstr ""
+
+#: src/conf.c:897
+msgid "Math Engine:"
+msgstr ""
+
+#: src/plugin.c:63
+msgid "Markdown Preview"
+msgstr ""
+
+#: src/plugin.c:125
+msgid "Export Markdown as HTML..."
+msgstr ""
+
+#: src/plugin.c:203
+msgid "The current document does not have a Markdown filetype."
+msgstr ""
+
+#: src/plugin.c:353
+msgid "Save HTML File As"
+msgstr ""
+
+#: src/plugin.c:381
+msgid "HTML Files"
+msgstr ""
+
+#: src/plugin.c:386
+msgid "All Files"
+msgstr ""
+
+#: src/plugin.c:397
+#, c-format
+msgid "Failed to export Markdown HTML to file '%s': %s"
+msgstr ""
+
+#: src/plugin.c:419
+msgid "Real-time Markdown preview"
+msgstr ""

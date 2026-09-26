@@ -1,0 +1,81 @@
+# German translations for geany-markdown.
+# This file is distributed under the same license as the geany-markdown project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: geany-markdown 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/yikuide-lab/geany-markdown/issues\n"
+ "PO-Revision-Date: 2026-09-26 13:30+0800\n"
+"Last-Translator: yikuide-lab <yikuide-lab@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Markdown Preview"
+msgstr "Markdown-Vorschau"
+
+msgid "Real-time Markdown preview"
+msgstr "Markdown-Echtzeitvorschau"
+
+msgid "Export Markdown as HTML..."
+msgstr "Markdown als HTML exportieren …"
+
+msgid "The current document does not have a Markdown filetype."
+msgstr "Das aktuelle Dokument hat nicht den Dateityp Markdown."
+
+msgid "Save HTML File As"
+msgstr "HTML-Datei speichern unter"
+
+msgid "HTML Files"
+msgstr "HTML-Dateien"
+
+msgid "All Files"
+msgstr "Alle Dateien"
+
+msgid "Failed to export Markdown HTML to file '%s': %s"
+msgstr "Exportieren von Markdown-HTML in die Datei „%s“ fehlgeschlagen: %s"
+
+msgid "Position:"
+msgstr "Position:"
+
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+msgid "Message Window"
+msgstr "Meldungsfenster"
+
+msgid "Font:"
+msgstr "Schrift:"
+
+msgid "Code Font:"
+msgstr "Schrift für Code:"
+
+msgid "BG Color:"
+msgstr "Hintergrundfarbe:"
+
+msgid "FG Color:"
+msgstr "Vordergrundfarbe:"
+
+msgid "Color Scheme:"
+msgstr "Farbschema:"
+
+msgid "Use current Geany color scheme (overrides BG/FG colors)"
+msgstr "Aktuelles Geany-Farbschema verwenden (überschreibt Hintergrund-/Vordergrundfarben)"
+
+msgid "Template:"
+msgstr "Vorlage:"
+
+msgid "Select Template File"
+msgstr "Vorlagendatei auswählen"
+
+msgid "Math:"
+msgstr "Formeln:"
+
+msgid "Enable formula rendering (math/physics/chemistry)"
+msgstr "Formeldarstellung aktivieren (Mathematik/Physik/Chemie)"
+
+msgid "Math Engine:"
+msgstr "Formel-Engine:"

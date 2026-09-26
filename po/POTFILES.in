@@ -1,0 +1,4 @@
+# Files whose _()-marked strings are extracted into geany-markdown.pot
+src/conf.c
+src/plugin.c
+src/viewer.c

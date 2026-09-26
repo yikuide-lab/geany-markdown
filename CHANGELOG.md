@@ -4,6 +4,11 @@
 
 ### 新增
 
+- **多语言界面**（`po/`）：gettext 标准方案，独立翻译域
+  `geany-markdown`（不干扰 geany-plugins 官方翻译目录）；内置
+  简体中文、德语、法语、韩语、日语五种完整翻译（各 22 条界面
+  字符串）；`make pot` 重新生成模板，`make` 自动编译并校验 `.po`，
+  安装到 `<localedir>/<lang>/LC_MESSAGES/geany-markdown.mo`。
 - **数学/物理/化学公式渲染**（`src/math.c`、`src/math.h`、`src/test-math.c`、`math/`）
   - 解析前提取公式为带随机 nonce 的不透明占位符，模板替换后还原，
     公式内容先做 HTML 转义（防注入）；

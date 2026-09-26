@@ -1,0 +1,81 @@
+# French translations for geany-markdown.
+# This file is distributed under the same license as the geany-markdown project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: geany-markdown 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/yikuide-lab/geany-markdown/issues\n"
+ "PO-Revision-Date: 2026-09-26 13:30+0800\n"
+"Last-Translator: yikuide-lab <yikuide-lab@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Markdown Preview"
+msgstr "Aperçu Markdown"
+
+msgid "Real-time Markdown preview"
+msgstr "Aperçu Markdown en temps réel"
+
+msgid "Export Markdown as HTML..."
+msgstr "Exporter Markdown en HTML…"
+
+msgid "The current document does not have a Markdown filetype."
+msgstr "Le type de fichier du document actuel n'est pas Markdown."
+
+msgid "Save HTML File As"
+msgstr "Enregistrer le fichier HTML sous"
+
+msgid "HTML Files"
+msgstr "Fichiers HTML"
+
+msgid "All Files"
+msgstr "Tous les fichiers"
+
+msgid "Failed to export Markdown HTML to file '%s': %s"
+msgstr "Échec de l'export du HTML Markdown vers le fichier « %s » : %s"
+
+msgid "Position:"
+msgstr "Position :"
+
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+msgid "Message Window"
+msgstr "Fenêtre de messages"
+
+msgid "Font:"
+msgstr "Police :"
+
+msgid "Code Font:"
+msgstr "Police du code :"
+
+msgid "BG Color:"
+msgstr "Couleur d'arrière-plan :"
+
+msgid "FG Color:"
+msgstr "Couleur du texte :"
+
+msgid "Color Scheme:"
+msgstr "Schéma de couleurs :"
+
+msgid "Use current Geany color scheme (overrides BG/FG colors)"
+msgstr "Utiliser le schéma de couleurs Geany actuel (remplace les couleurs d'arrière-plan et de texte)"
+
+msgid "Template:"
+msgstr "Modèle :"
+
+msgid "Select Template File"
+msgstr "Sélectionner un fichier modèle"
+
+msgid "Math:"
+msgstr "Formules :"
+
+msgid "Enable formula rendering (math/physics/chemistry)"
+msgstr "Activer le rendu des formules (maths/physique/chimie)"
+
+msgid "Math Engine:"
+msgstr "Moteur de formules :"
